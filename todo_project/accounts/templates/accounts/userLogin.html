@@ -1,0 +1,98 @@
+{% extends 'base/main.html' %}
+{% load static %}
+
+{% block title %}Todo App: Login To Your Account{% endblock title %}
+
+{% block content %}
+    <head>
+        <link rel="stylesheet" href="{% static 'accounts/css/login_register.css' %}">
+    </head>
+
+    <div class="container-fluid" >
+
+        <div class="signin-container d-md-flex">
+            
+            
+            <div class="mt-5 mb-5 logo-container">
+                <div class="svg-image mt-5">
+                    <img class="img-fluid" src="{% static 'accounts/undraw/login.svg' %}" alt="brand image">
+                </div>
+            </div>
+
+
+            <div class="p-md-2">
+            </div>
+
+
+            <div class="form-container m-md-5 mx-auto">
+                <form action="" method="post">
+                    {% csrf_token %}
+
+
+                    {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                        <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                            {% endfor %}
+                    </ul>
+                    {% endif %}
+                    
+
+                    <h1 class="title"><a href="#">Sign In</a></h1>
+
+
+                    <div class="input-field">
+                        <label for="username_or_email">Username or email</label>
+                        <input type="text" name="username_or_email" id="id_username" class="form-control"  required autocomplete="" />
+                    </div>
+
+                    
+                    <div class="input-field">
+                        <label for="password">Password</label>
+                        <input type="password" name="password1" id="id_password1"class="form-control"  required autocomplete="" />
+                        <input type="checkbox" onclick="showPassword()" > show password
+                    </div>
+
+                                     
+                    <div class="submit-container input-field">
+                        <button name="button" type="submit" class="btn bg-primary text-light">Login</button>
+                    </div>
+
+
+                    {% comment %} forgot password {% endcomment %}
+                    <hr class="mt-5">
+                    <div class ="input-field">
+                        <a href="{% url 'passwordResetForm' %}" class ="btn bg-success text-light form-control">Forgot My Password</a>
+                    </div>
+
+
+                    <div class="input-field">
+                        <a href="{% url 'register' %}" class="btn bg-success text-light form-control">Register New Account</a> 
+                    </div>
+
+
+                    
+
+
+                </form> 
+            </div>
+            
+
+
+        </div>
+    </div>
+
+
+    <script>
+        function showPassword() {
+            var x = document.getElementById("id_password1");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script> 
+
+{% endblock content %}
+

@@ -1,0 +1,22 @@
+{% extends 'base/main.html' %} 
+{% load static %} 
+
+{% block title %}WELCOME: Manage Your Tasks{% endblock title %}
+
+{% block content %}
+
+    <div class="text-center p-5">
+        <h1 class="fw-bold p-2">A Robust Task Manager !!!</h1>
+
+        <p class="large">
+            The Todo App is a task management application designed to help you organize
+            your tasks and accomplish your goals. <br /><br />Create or Edit tasks to
+            get reminders, track task progress
+        </p>
+        
+        <a href="{% url 'register' %}" class="btn btn-block btn-outline-light bg-success">
+            Get Started Today
+        </a>
+    </div>
+
+{% endblock content %}

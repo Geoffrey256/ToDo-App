@@ -1,0 +1,35 @@
+{% extends 'base/main.html' %} 
+{% load static %} 
+
+{% block title %}CONTACT-US: MGT TODO-APP{% endblock title %}
+
+{% block content %}
+
+    <head>
+        <link rel="stylesheet" href="{% static 'css/welcome.css' %}" />
+    </head>
+
+
+    <div class="container-md my-5">
+        <section id="contact">
+            <h1>Contact Us</h1>
+            <p>Feel free to reach out to us through any of the folloing channels:</p>
+            <ul>
+                <li>
+                    <strong>Email:</strong>
+                    <a href="mailto:info@todoapp.com">contact@todoapp.com</a>
+                </li>
+
+                <li>
+                    <strong>Twitter:</strong>
+                    <a href="https://twitter.com/@todoapp">@todoapp</a>
+                </li>
+                <li>
+                    <strong>Facebook:</strong>
+                    <a href="https://www.facebook.com/todoapp">todoapp facebook</a>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+{% endblock content %}
