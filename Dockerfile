@@ -11,7 +11,7 @@ WORKDIR /app
 COPY . /app
 
 # Install dependencies
-RUN pip install -r requirements.txt
+RUN pip install -r ./todo_project/requirements.txt
 
 # Expose port
 EXPOSE 8000
