@@ -12,7 +12,19 @@ SECRET_KEY = 'django-insecure-@_wmow(8vrm_jbb)jc1$mlf!e!s79bhep%%$3^icf(lzj6)16d
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    'todo-app-ca9o.onrender.com',
+
+]
+
+# Add trusted origins for CSRF protection
+CSRF_TRUSTED_ORIGINS = [
+    'https://todo-app-ca9o.onrender.com',
+]
+
+
 
 
 INSTALLED_APPS = [
