@@ -1,12 +1,14 @@
-# FROM python:3.12-slim-bullseye
-# # FROM python:3.12-slim
+FROM python:3.10-slim
 
-# WORKDIR /app
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
 
-# COPY . /app
+WORKDIR /app
 
-# RUN pip install -r ToDo-App/requirements.txt --no-cache-dir --verbose
+COPY . /app
 
-# EXPOSE 8000
+RUN pip install -r requirements.txt
 
-# CMD [ "python", "manage.py", "runserver", "0.0.0.0:8000" ]
+EXPOSE 8000
+
+CMD [ "python", "manage.py", "runserver", "0.0.0.0:8000" ]
