@@ -10,5 +10,3 @@
 # EXPOSE 8000
 
 # CMD [ "python", "manage.py", "runserver", "0.0.0.0:8000" ]
-# # CMD ["gunicorn", "aqua_gas.wsgi:application", "--bind", "0.0.0.0:$PORT"]
-# # CMD ["sh", "-c", "gunicorn aqua_gas.wsgi:application --bind 0.0.0.0:${PORT:-8000}"]
