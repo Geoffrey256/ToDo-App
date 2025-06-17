@@ -5,7 +5,7 @@ WORKDIR /app
 
 COPY . /app
 
-RUN pip install -r requirements.txt --no-cache-dir --verbose
+RUN pip install -r ToDo-App/requirements.txt --no-cache-dir --verbose
 
 EXPOSE 8000
 
