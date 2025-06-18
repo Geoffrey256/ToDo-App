@@ -7,7 +7,7 @@ WORKDIR /app
 
 COPY . /app
 
-RUN pip install -r requirements.txt
+RUN pip install -r ./todo_project/requirements.txt
 
 EXPOSE 8000
 
