@@ -23,6 +23,7 @@ ALLOWED_HOSTS = [
 # Add trusted origins for CSRF protection
 CSRF_TRUSTED_ORIGINS = [
     'https://todo-app-ca9o.onrender.com',
+    'https://to-do-app-ten-ashy-61.vercel.app/',
 ]
 
 
