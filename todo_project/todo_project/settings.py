@@ -16,6 +16,7 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     'todo-app-ca9o.onrender.com',
+    'https://to-do-app-ten-ashy-61.vercel.app/',
 
 ]
 
@@ -23,8 +24,6 @@ ALLOWED_HOSTS = [
 CSRF_TRUSTED_ORIGINS = [
     'https://todo-app-ca9o.onrender.com',
 ]
-
-
 
 
 INSTALLED_APPS = [
@@ -123,7 +122,6 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
 
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
@@ -152,13 +150,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 """
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'  # We shall change the *console with smtp when we begin hosting  
+# We shall change the *console with smtp when we begin hosting
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'equipstreams@gmail.com'
 EMAIL_HOST_PASSWORD = 'kkijtqnllcusuuip'
 EMAIL_USE_TLS = True
-
 
 
 """
